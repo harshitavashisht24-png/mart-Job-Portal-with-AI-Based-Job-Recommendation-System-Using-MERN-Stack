@@ -5,6 +5,18 @@ exports.applyJob = async (req, res) => {
   try {
     const { jobId } = req.body;
 
+    // Check if user already applied
+    const existingApplication = await Application.findOne({
+      userId: req.user.id,
+      jobId
+    });
+
+    if (existingApplication) {
+      return res.status(400).json({
+        message: "Already Applied"
+      });
+    }
+
     const application = await Application.create({
       userId: req.user.id,
       jobId
