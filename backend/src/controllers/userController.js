@@ -5,7 +5,7 @@ exports.updateProfile = async (req, res) => {
   try {
     const { skills, education, experience } = req.body;
 
-    const user = await User.findByIdAndUpdate(
+    const User = await User.findByIdAndUpdate(
       req.user.id,
       {
         skills,

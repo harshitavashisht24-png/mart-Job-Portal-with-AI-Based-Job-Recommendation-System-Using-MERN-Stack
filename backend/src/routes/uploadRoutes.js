@@ -11,7 +11,7 @@ router.post(
   upload.single("resume"),
   async (req, res) => {
     try {
-      const user = await User.findByIdAndUpdate(
+      const User = await User.findByIdAndUpdate(
         req.user.id,
         {
           resume: req.file.path
