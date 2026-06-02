@@ -162,11 +162,11 @@ Result:
 
 ### Recommendations Page
 
-![Recommendations](screenshots/recommendations.png)
+![Recommendations](screenshots/recommendation.png)
 
 ### My Applications
 
-![Applications](screenshots/applications.png)
+![Applications](screenshots/application.png)
 
 ### Resume Upload
 
